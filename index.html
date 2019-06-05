@@ -6,22 +6,28 @@
     <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
     <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v3.3.0/dist/aframe-physics-system.min.js"></script>
+    <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v4.1.2/dist/aframe-extras.min.js"></script>
+    <script src="https://rawgit.com/wmurphyrd/aframe-super-hands-component/master/dist/super-hands.js"></script>
   </head>
   <body>
     <a-scene>
-      <a-entity hand-controls="left"></a-entity>
-      <a-entity hand-controls="right"></a-entity>
-      <a-torus rotation="90 0 0" radius="0.3" radius-tubular="0.01" position="4.66 2.8 0" static-body color="gray"></a-torus>
-      <a-cylinder color="gray" position="5 2 0" radius="0.03" height="3" rotation="0 0 0" static-body></a-cylinder>
-      <a-box width="0.05" depth="1.5" position="4.99 3 0" static-body></a-box>
-      <a-sphere radius="0.1" position="0 3 0" dynamic-body="mass: 1" src="https://cdn.glitch.com/d76a99a5-374d-4226-9b66-bb528eb4dbf6%2Fballdimpled.png?1559039742078"></a-sphere>
+      <a-entity>
+        <a-camera></a-camera>
+        <a-entity sphere-collider="objects: a-sphere" super-hands hand-controls="left"></a-entity>
+        <a-entity sphere-collider="objects: a-sphere" super-hands hand-controls="right"></a-entity>
+      </a-entity>
+
+      <a-torus rotation="90 0 0" radius="0.3" radius-tubular="0.01" position="4.6 0.8 0" static-body color="gray"></a-torus>
+      <a-cylinder color="gray" position="5 0 0" radius="0.03" height="3" rotation="0 0 0" static-body></a-cylinder>
+      <a-box width="0.05" depth="1.5" position="4.99 1.01 0" static-body></a-box>
+      <a-sphere hoverable grabbable stretchable draggable dropppable radius="0.1" position="0 3 0" dynamic-body="mass: 1" src="https://cdn.glitch.com/d76a99a5-374d-4226-9b66-bb528eb4dbf6%2Fballdimpled.png?1559039742078"></a-sphere>
       <a-plane position="0 1 0" rotation="-90 0 0" width="10" height="10" color="green" static-body></a-plane>
-      <a-sky color="black"></a-sky>
+      <a-sky color="#99c0ff"></a-sky>
       <a-assets>
         <a-asset-item id="ball_court_mtl" src="ball_court.mtl"></a-asset-item>
         <a-asset-item id="ball_court_obj" src="ball_court.obj"></a-asset-item> 
       </a-assets>
-      <a-entity  obj-model="obj: #ball_court_obj; mtl: #ball_court_mtl" scale ="0.007 0.007 0.007" position="4 1 1" rotation="-90 -90 0"></a-entity>
+      <a-entity obj-model="obj: #ball_court_obj; mtl: #ball_court_mtl" scale ="0.007 0.007 0.007" position="4 1 1" rotation="-90 -90 0"></a-entity>
     </a-scene>
   </body>
 </html>
