@@ -5,17 +5,14 @@
     <meta name="description" content="Hello, WebVR! - A-Frame">
     <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
-    <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v3.3.0/dist/aframe-physics-system.min.js"></script>
     <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v4.1.2/dist/aframe-extras.min.js"></script>
-    <script src="https://rawgit.com/wmurphyrd/aframe-super-hands-component/master/dist/super-hands.js"></script>
+    <script src="https://unpkg.com/super-hands@3.0.0/dist/super-hands.min.js"></script>
   </head>
   <body>
     <a-scene>
-      <a-entity>
         <a-camera></a-camera>
         <a-entity sphere-collider="objects: a-sphere" super-hands hand-controls="left"></a-entity>
         <a-entity sphere-collider="objects: a-sphere" super-hands hand-controls="right"></a-entity>
-      </a-entity>
 
       <a-torus rotation="90 0 0" radius="0.3" radius-tubular="0.01" position="4.6 0.8 0" static-body color="gray"></a-torus>
       <a-cylinder color="gray" position="5 0 0" radius="0.03" height="3" rotation="0 0 0" static-body></a-cylinder>
