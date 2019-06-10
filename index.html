@@ -32,6 +32,11 @@
       <a-plane position="0 -1 0" rotation="-90 0 0" width="10" height="10" color="green" dynamic-body></a-plane>
       <a-plane position="0 -1.1 0" rotation="-90 0 0" width="10" height="10" color="green" static-body></a-plane>
       <a-sky color="#99c0ff"></a-sky>
+      <a-assets>
+        <a-asset-item id="ball_court_mtl" src="ball_court.mtl"></a-asset-item>
+        <a-asset-item id="ball_court_obj" src="ball_court.obj"></a-asset-item> 
+      </a-assets>
+      <a-entity obj-model="obj: #ball_court_obj; mtl: #ball_court_mtl" scale ="0.007 0.007 0.007" position="4 1 1" rotation="-90 -90 0" static-body></a-entity>
     </a-scene>
   </body>
 </html>
