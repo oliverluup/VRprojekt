@@ -13,12 +13,8 @@
   </head>
   <body>
     <a-scene>
-      <a-entity environment></a-entity>
       <a-entity id = "cameraRig">
         <a-camera></a-camera>
-        <!--<a-entity sphere-collider="objects: a-sphere" static-body="shape: sphere; sphereRadius: 0.02" teleport-controls="cameraRig: #cameraRig; button: trackpadup;" super-hands hand-controls="left"></a-entity>
-        <a-entity sphere-collider="objects: a-sphere" static-body="shape: sphere; sphereRadius: 0.02" teleport-controls="cameraRig: #cameraRig; type: line; button: trackpadup;" super-hands hand-controls="right"></a-entity>
-      </a-entity> -->
       <a-entity teleport-controls="cameraRig: #cameraRig; button: trigger;"
           vive-controls="hand: left"
           oculus-touch-controls="hand: left"
@@ -31,12 +27,10 @@
           oculus-touch-controls="hand: right"
           daydream-controls="right" gearvr-controls="right">
         </a-entity>
-      <a-torus rotation="90 0 0" radius="0.3" radius-tubular="0.01" position="4.6 0.8 0" static-body color="gray"></a-torus>
-      <a-cylinder color="gray" position="5 0 0" radius="0.03" height="3" rotation="0 0 0" static-body></a-cylinder>
-      <a-box width="0.05" depth="1.5" position="4.99 1.01 0" static-body></a-box>
       <a-box width="0.1" depth="5" height="4" position="5 1 0" static-body></a-box>
       <a-sphere hoverable grabbable stretchable draggable dropppable dynamic-body radius="0.15" position="0 1.5 0" src="https://cdn.glitch.com/d76a99a5-374d-4226-9b66-bb528eb4dbf6%2Fballdimpled.png?1559039742078"></a-sphere>
-      <a-plane position="0 0 0" rotation="-90 0 0" width="10" height="10" color="green" static-body></a-plane>
+      <a-plane position="0 -1 0" rotation="-90 0 0" width="10" height="10" color="green" dynamic-body></a-plane>
+      <a-plane position="0 -1.1 0" rotation="-90 0 0" width="10" height="10" color="green" static-body></a-plane>
       <a-sky color="#99c0ff"></a-sky>
     </a-scene>
   </body>
